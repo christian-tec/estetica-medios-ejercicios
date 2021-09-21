@@ -1,0 +1,30 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    font-family: arial;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+a:link {
+    color: #000;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+a:visited {
+    color: #000;
+}
+
+.inicio-link {
+    font-weight: normal;
+}
