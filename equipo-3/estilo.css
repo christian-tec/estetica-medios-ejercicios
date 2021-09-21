@@ -1,0 +1,46 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    
+}
+body {
+    font-family: arial;
+    width: 800px;
+    margin: 0 auto;
+    background-color: #000;
+    color: #fff
+}
+
+.navegacion {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 30px;
+    border-bottom: solid #f00;
+}
+
+a:link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+a:visited {
+    color: #fff;
+    
+}
+
+.inicio-link {
+    font-weight: normal;
+}
+
+br {
+    color: #fff;
+}
+
+.imagen {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+    border-bottom: solid rgb(0, 51, 255);
+}
