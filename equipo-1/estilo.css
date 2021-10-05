@@ -76,6 +76,11 @@ a:nth-child(even) {
   text-align: center;
   font-size: 10px;
   font-weight: 300;
+  transition-duration: 1s;
+}
+
+.obra:hover {
+  transform: scale(1.5);
 }
 
 .contenedor {
