@@ -53,6 +53,11 @@ a:nth-child(even) {
   background-size: 320px 150px;
   height: 193px;
   width: 320px;
+  transition-duration: 10s;
+}
+
+.obras-backgroud:hover{
+  width: 400px;
 }
 
 .two-color {
@@ -80,7 +85,13 @@ a:nth-child(even) {
 }
 
 .obra:hover {
-  transform: scale(1.5);
+  transform: scale(1.5) translate(-20%);
+  box-shadow: 8px 8px#2d2d2c17;
+  border-radius: 10px;
+}
+
+.imagen-hover:hover{
+  border-radius: 10px;
 }
 
 .contenedor {
@@ -113,4 +124,14 @@ a:nth-child(even) {
   width: var(--main-width);
   position: absolute;
   top: 330px;
+}
+
+.transition{
+  background-color: blue;
+  height: 40px;
+  transition-duration: 1s;
+}
+.transition:hover {
+  height: 100px;
+  width: 100px;
 }
