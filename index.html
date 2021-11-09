@@ -8,34 +8,70 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
 
+    <script language="JavaScript">
+        function showInput() {
+            var texto = "<li>" + document.getElementById("user_input").value + "</li>";
+            console.log(texto);
+            document.getElementById("display").innerHTML += texto;
+        }
+
+        function showText(obra) {
+            console.log("click en obra: " + obra);
+            texto = [ "<p>obra 1</p> <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                 "<p>obra 2 monet <p> <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+            ]
+            document.getElementsByClassName("obra-datos")[0].innerHTML = texto[obra];
+            // document.getElementsByClassName("obra-datos")[0].setAttribute("class", "obra-datos-visible");
+        }
+    </script>
+
 </head>
 
 <body>
+
+
+
     <div class="contenido">
-        <div class="tarjeta-animada">
-            <div class="front">
-                <a href="equipo-1/index.html">Artista 1
-                </a>
+        <div class="obra">
+            <div class="tarjeta">
+                <div class="front">
+                    <a href="equipo-1/index.html">Artista 1
+                    </a>
+                </div>
+                <div class="back">
+                    <img src="./equipo-1/img/autoretrato.png" width="300px" height="370px">
+                </div>
             </div>
-            <div class="back">
-                <img src="./equipo-1/img/autoretrato.png" width="300px" height="370px">
-            </div>
+            <div class="ver-mas" onclick="showText(0);">Ver más</div>
         </div>
 
-        <div class="tarjeta-animada delay-2">
-            <div class="front">
-                <a href="equipo-2/index.html">Artista 2
-                </a>
+
+        <div class="obra">
+            <div class="tarjeta delay-2">
+                <div class="front">
+                    <a href="equipo-2/index.html">Artista 2
+                    </a>
+                </div>
+                <div class="back">
+                    <img src="./equipo-2/img/inicio.png" width="300px" height="370px">
+                </div>
+
             </div>
-            <div class="back">
-                <img src="./equipo-2/img/inicio.png" width="300px" height="370px">
-            </div>
+            <div class="ver-mas" onclick="showText(1);">Ver más</div>
         </div>
     </div>
-    
-    <div class="contenido">
 
-        <div class="tarjeta-animada delay-3">
+    <div class="contenido">
+        <div class="obra-datos">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+            standard dummy text 
+        </div>    
+
+    </div>
+    
+
+    <!-- <div class="contenido">
+        <div class="tarjeta delay-3">
             <div class="front">
                 <a href="equipo-3/index.html">Artista 3
                 </a>
@@ -44,8 +80,8 @@
                 <img src="./equipo-3/img/img-2.jpeg" width="300px" height="370px">
             </div>
         </div>
-    </div>
-    
+    </div> -->
+
 
 </body>
 

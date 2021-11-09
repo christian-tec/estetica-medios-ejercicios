@@ -4,13 +4,52 @@ body {
   font-family: sans-serif;
 }
 
+.obra {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ver-mas {
+  background-color: black;
+  color: #fff;
+  padding: 30px;
+  font-size: 24px;
+}
+
+.obra-datos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
+  flex-direction: column;
+  color: rgb(57, 57, 57);
+  background-color: rgba(0, 0, 0, 0.084);
+  width: 300px;
+  height: 100px;
+  padding: 30px;
+}
+
+.obra-datos-visible {
+  visibility: visible;
+}
+
+
 .contenido {
   display: flex;
   justify-content: center;
+  align-items: center;
+  column-gap: 30px;
   perspective: 1000px;
   gap: 30px;
   margin-top: 40px;
 }
+
+/* p {
+  font-size: 30px;
+  color: rgb(140, 140, 140);
+} */
 
 .tarjeta {
   position: relative;
