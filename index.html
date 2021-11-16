@@ -1,37 +1,85 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Estética de medios digitales</title>
-    <link href="./estilos.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+    <link href="./estilos.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
     <script language="JavaScript">
-        function showInput() {
-            var texto = "<li>" + document.getElementById("user_input").value + "</li>";
-            console.log(texto);
-            document.getElementById("display").innerHTML += texto;
+      function showInput() {
+        var texto =
+          "<li>" + document.getElementById("user_input").value + "</li>";
+        console.log(texto);
+        document.getElementById("display").innerHTML += texto;
+      }
+
+      function showText(obra) {
+        console.log("click en obra: " + obra);
+        texto = [
+          "<p>obra 1</p> <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "<p>obra 2 monet <p> <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "<p>obra 3 monet <p> <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "<p>obra 4 monet <p> <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "<p>obra 5 monet <p> <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        ];
+        document.getElementsByClassName("obra-datos")[0].innerHTML =
+          texto[obra];
+        // document.getElementsByClassName("obra-datos")[0].setAttribute("class", "obra-datos-visible");
+      }
+
+      indice = 4;
+
+      function restar() {
+        indice = indice - 1;
+        showImage(indice);
+      }
+
+      function sumar() {
+        indice = indice + 1;
+        showImage(indice);
+      }
+
+      function showImage() {
+        imagenes = document.getElementsByClassName("imagen");
+        // console.log(imagenes);
+        // console.log(imagenes.length);
+        console.log(indice);
+
+        if (indice >= imagenes.length) {
+          console.log("cambio a 0");
+          indice = 0;
         }
 
-        function showText(obra) {
-            console.log("click en obra: " + obra);
-            texto = [ "<p>obra 1</p> <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                 "<p>obra 2 monet <p> <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-            ]
-            document.getElementsByClassName("obra-datos")[0].innerHTML = texto[obra];
-            // document.getElementsByClassName("obra-datos")[0].setAttribute("class", "obra-datos-visible");
+        if (indice < 0) {
+          indice = imagenes.length - 1;
         }
+
+        for (i = 0; i < imagenes.length; i++) {
+          imagenes[i].style.visibility = "hidden";
+          imagenes[i].className = "imagen";
+        }
+
+        console.log(indice);
+
+        imagenes[indice].style.visibility = "visible";
+        imagenes[indice -1].className = "imagen img-izq";
+        imagenes[indice -1].style.visibility = "visible";
+
+        imagenes[indice +1].className = "imagen img-der";
+        imagenes[indice +1].style.visibility = "visible";
+        
+        showText(indice);
+      }
     </script>
+  </head>
 
-</head>
-
-<body>
-
-
-
-    <div class="contenido">
+  <body>
+    <!-- <div class="contenido">
         <div class="obra">
             <div class="tarjeta">
                 <div class="front">
@@ -67,8 +115,7 @@
             standard dummy text 
         </div>    
 
-    </div>
-    
+    </div> -->
 
     <!-- <div class="contenido">
         <div class="tarjeta delay-3">
@@ -82,7 +129,25 @@
         </div>
     </div> -->
 
+    <div class="slider">
+      <img class="imagen" src="./equipo-3/img/img-7.jpeg" />
+      <img class="imagen img-izq" src="./equipo-3/img/img-8.jpeg" />
+      <img class="imagen img-der" src="./equipo-3/img/img-9.jpeg" />
+      <img class="imagen" src="./equipo-3/img/img-4.jpeg" />
+      <img class="imagen" src="./equipo-3/img/img-2.jpeg" />
+      <span class="izquierda flecha" onclick="restar();">&#10094;</span>
+      <span class="derecha flecha" onclick="sumar();">&#10095;</span>
+    </div>
 
-</body>
-
+    <div class="contenido">
+      <div class="obra-datos">
+        <p>obra 5 monet</p>
+        <p></p>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.
+        </p>
+      </div>
+    </div>
+  </body>
 </html>

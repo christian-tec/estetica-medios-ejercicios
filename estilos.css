@@ -181,3 +181,59 @@ a:visited {
     transition-delay: 1s;
     transform: translateX(300%);
 } */
+
+
+
+img {
+  width: 900px;
+  height: 500px;
+}
+
+.slider {
+  position: relative;
+  width: 900px;
+  height: 500px;
+}
+
+.imagen {
+  position: absolute;
+  top: 10px;
+}
+
+.flecha {
+  position: absolute;
+  margin-top: 30%;
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  cursor: pointer;
+  width: 40px;
+  text-align: center;
+  border-radius:10px;
+}
+
+.flecha:hover{
+  background-color: rgba(0, 0, 0, 0.482);
+}
+
+.izquierda  {
+  position: absolute;
+  margin-left: 20px;
+}
+
+.derecha {
+  position: absolute;
+  margin-left: 860px;
+}
+
+.img-izq {
+  position: absolute;
+  margin-left: -300px;
+  transform: scaleY(.9);
+}
+
+
+.img-der {
+  position: absolute;
+  margin-left: 300px;
+  transform: scaleY(.9);
+}
